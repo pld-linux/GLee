@@ -11,6 +11,8 @@ URL:		http://elf-stone.com/downloads.php
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libstdc++-devel
+BuildRequires:	rpmbuild(macros) >= 1.167
 Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -28,10 +30,24 @@ g³ównych funkcji w czasie inicjalizacji. Oszczêdza to programistom
 trudów rêcznego linkowania ka¿dego wymaganego rozszerzenia i
 efektywnie czyni bibliotekê OpenGL aktualn±.
 
+%package devel
+Summary:	Header file for GLee library
+Summary(pl):	Plik nag³ówkowy biblioteki GLee
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+Requires:	OpenGL-devel
+
+%description devel
+Header file for GLee library.
+
+%description devel -l pl
+Plik nag³ówkowy biblioteki GLee.
+
 %prep
 %setup -q -n glee
 
 %build
+CXXFLAGS="%{rpmcxxflags} -fPIC"
 %configure
 %{__make}
 
@@ -55,5 +71,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc extensionList.txt readme.txt
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_includedir}/GL/*
+%attr(755,root,root) %{_libdir}/libGLee.so
+
+%files devel
+%defattr(644,root,root,755)
+%{_includedir}/GL/GLee.h
