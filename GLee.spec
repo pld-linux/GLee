@@ -1,4 +1,5 @@
 Summary:	OpenGL Easy Extension library
+Summary(pl):	Biblioteka OpenGL Easy Extension
 Name:		GLee
 Version:	3.03
 Release:	0.5
@@ -14,7 +15,18 @@ Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The OpenGL Easy Extension library (GLee) makes life easier for OpenGL developers by automatically linking OpenGL extensions and core functions at initialisation time. This saves programmers the effort of manually linking every required extension, and effectively brings the OpenGL library up to date.
+The OpenGL Easy Extension library (GLee) makes life easier for OpenGL
+developers by automatically linking OpenGL extensions and core
+functions at initialisation time. This saves programmers the effort of
+manually linking every required extension, and effectively brings the
+OpenGL library up to date.
+
+%description -l pl
+Biblioteka OpenGL Easy Extension (GLee) u³atwia ¿ycie programistom
+u¿ywaj±cym OpenGL poprzez automatyczne linkowanie rozszerzeñ OpenGL i
+g³ównych funkcji w czasie inicjalizacji. Oszczêdza to programistom
+trudów rêcznego linkowania ka¿dego wymaganego rozszerzenia i
+efektywnie czyni bibliotekê OpenGL aktualn±.
 
 %prep
 %setup -q -n glee
