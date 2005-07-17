@@ -1,12 +1,15 @@
 Summary:	OpenGL Easy Extension library
 Summary(pl):	Biblioteka OpenGL Easy Extension
 Name:		GLee
-Version:	3.03
-Release:	0.5
+Version:	5.03
+%define		_ver	%(echo %{version} | tr . _)
+Release:	1
 License:	BSD-like
 Group:		X11/Libraries
-Source0:	http://elf-stone.com/downloads/GLee/%{name}-%{version}-src.tar.gz
-# Source0-md5:	84664f6545ed890ea87244c1ea5b2259
+Source0:	http://elf-stone.com/downloads/GLee/%{name}%{_ver}.zip
+# Source0-md5:	92a3f9282af73b8a9966ad5a0e2eaf8d
+Source1:	http://elf-stone.com/downloads/GLee/%{name}-3.03-src.tar.gz
+# Source1-md5:	84664f6545ed890ea87244c1ea5b2259
 URL:		http://elf-stone.com/downloads.php
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
@@ -44,7 +47,8 @@ Header file for GLee library.
 Plik nag³ówkowy biblioteki GLee.
 
 %prep
-%setup -q -n glee
+%setup -q -a1 -c
+cp glee/{configure,config.h.in,install-sh,Makefile.in} .
 
 %build
 CXXFLAGS="%{rpmcxxflags} -fPIC"
