@@ -1,5 +1,5 @@
 Summary:	OpenGL Easy Extension library
-Summary(pl.UTF-8):   Biblioteka OpenGL Easy Extension
+Summary(pl.UTF-8):	Biblioteka OpenGL Easy Extension
 Name:		GLee
 Version:	5.03
 %define		_ver	%(echo %{version} | tr . _)
@@ -35,7 +35,7 @@ efektywnie czyni bibliotekę OpenGL aktualną.
 
 %package devel
 Summary:	Header file for GLee library
-Summary(pl.UTF-8):   Plik nagłówkowy biblioteki GLee
+Summary(pl.UTF-8):	Plik nagłówkowy biblioteki GLee
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	OpenGL-devel
