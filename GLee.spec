@@ -1,5 +1,5 @@
 Summary:	OpenGL Easy Extension library
-Summary(pl):	Biblioteka OpenGL Easy Extension
+Summary(pl.UTF-8):   Biblioteka OpenGL Easy Extension
 Name:		GLee
 Version:	5.03
 %define		_ver	%(echo %{version} | tr . _)
@@ -26,16 +26,16 @@ functions at initialisation time. This saves programmers the effort of
 manually linking every required extension, and effectively brings the
 OpenGL library up to date.
 
-%description -l pl
-Biblioteka OpenGL Easy Extension (GLee) u³atwia ¿ycie programistom
-u¿ywaj±cym OpenGL poprzez automatyczne linkowanie rozszerzeñ OpenGL i
-g³ównych funkcji w czasie inicjalizacji. Oszczêdza to programistom
-trudów rêcznego linkowania ka¿dego wymaganego rozszerzenia i
-efektywnie czyni bibliotekê OpenGL aktualn±.
+%description -l pl.UTF-8
+Biblioteka OpenGL Easy Extension (GLee) uÅ‚atwia Å¼ycie programistom
+uÅ¼ywajÄ…cym OpenGL poprzez automatyczne linkowanie rozszerzeÅ„ OpenGL i
+gÅ‚Ã³wnych funkcji w czasie inicjalizacji. OszczÄ™dza to programistom
+trudÃ³w rÄ™cznego linkowania kaÅ¼dego wymaganego rozszerzenia i
+efektywnie czyni bibliotekÄ™ OpenGL aktualnÄ….
 
 %package devel
 Summary:	Header file for GLee library
-Summary(pl):	Plik nag³ówkowy biblioteki GLee
+Summary(pl.UTF-8):   Plik nagÅ‚Ã³wkowy biblioteki GLee
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	OpenGL-devel
@@ -43,8 +43,8 @@ Requires:	OpenGL-devel
 %description devel
 Header file for GLee library.
 
-%description devel -l pl
-Plik nag³ówkowy biblioteki GLee.
+%description devel -l pl.UTF-8
+Plik nagÅ‚Ã³wkowy biblioteki GLee.
 
 %prep
 %setup -q -a1 -c
