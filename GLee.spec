@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Biblioteka OpenGL Easy Extension
 Name:		GLee
 Version:	5.03
 %define		_ver	%(echo %{version} | tr . _)
-Release:	1
+Release:	2
 License:	BSD-like
 Group:		X11/Libraries
 Source0:	http://elf-stone.com/downloads/GLee/%{name}%{_ver}.zip
